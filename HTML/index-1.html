@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta
+			name="description"
+			content="This page contains description about Devansh" />
+		<title>My first HTML file</title>
+		<!-- <link rel="stylesheet" href="style.css" /> -->
+	</head>
+	<body>
+		<!-- Semantic tags -->
+
+		<h1 style="background-color: aqua">This is my first Heading.</h1>
+		<h2 style="color: brown; background-color: rgb(171, 244, 171)">
+			This is my second Heading.
+		</h2>
+		<h3>This is my third Heading.</h3>
+		<h4>This is my fourth Heading.</h4>
+		<h5>This is my fifth Heading.</h5>
+		<h6>This is my sixth Heading.</h6>
+
+		<h7> This is my seventh Heading. </h7>
+		<h8> This is my eighth Heading. </h8>
+
+		<p>This is my First Paragraph.</p>
+
+		<a href="https://www.google.com">Click here!</a>
+
+		<!-- type="square", type="disc", type="circle" -->
+		<ul type="disc">
+			<li>Kurkure</li>
+			<li>Maggie</li>
+			<li>Lays</li>
+			<li>French Fries</li>
+		</ul>
+
+		<!-- ol>li*3 -->
+		<!-- type="I", type="i", type="1", type="a", type="A" -->
+		<ol type="i">
+			<li>Kurkure</li>
+			<li>Maggie</li>
+			<li>Lays</li>
+			<li>French Fries</li>
+		</ol>
+
+		<dl>
+			<dt>A.</dt>
+			<dd>Devansh</dd>
+
+			<dt>B.</dt>
+			<dd>Sadana</dd>
+
+			<dt>C.</dt>
+			<dd>John Cena</dd>
+		</dl>
+
+		<!-- NOTE: In HTML, ol-ul are differed not by their labels 
+        but by their meanings, that is in ol, items must be in the order, 
+        while in ul items can be in random order because in some action 
+        they maybe affected in orderd and random ways resp. Labels can always be changed -->
+
+		<!-- table>(tr>td*3)*4 -->
+		<table>
+			<caption>
+				Student details
+			</caption>
+
+			<thead>
+				<tr>
+					<td>Sr. No.</td>
+					<td>Name</td>
+					<td>Grade</td>
+				</tr>
+			</thead>
+
+			<tbody>
+				<tr>
+					<td>1</td>
+					<td>Devansh</td>
+					<td>AA</td>
+				</tr>
+				<tr>
+					<td>2</td>
+					<td rowspan="2">John Cena</td>
+					<td>AB</td>
+				</tr>
+				<tr>
+					<td>3</td>
+					<!-- <td>Brock Lesnar</td> -->
+					<td>AB</td>
+				</tr>
+			</tbody>
+
+			<tfoot>
+				<tr>
+					<td>Footer-1</td>
+					<td>Footer-2</td>
+					<td>Footer-3</td>
+				</tr>
+			</tfoot>
+		</table>
+
+		<!-- alt means alternative text -->
+
+		<img
+			src="https://media.istockphoto.com/id/1458782106/photo/scenic-aerial-view-of-the-mountain-landscape-with-a-forest-and-the-crystal-blue-river-in.jpg?s=612x612&w=0&k=20&c=NXQ_OK6JtmyRRBef8Wd67UZ3scQJKySkXl1ORaActH4="
+			alt="Nature image"
+			width="500"
+			height="300" />
+
+		<br />
+
+		<!-- Bookmark using anchor tag -->
+		<a href="#xyz">Go to Paragraph</a>
+
+		<p id="xyz">You came here to the paragraph!</p>
+
+		<!-- Formatting tags -->
+
+		<p>
+			<b>Lorem</b> <i>ipsum</i> <u>dolor</u> <s>sit</s> amet consectetur,
+			<strong>adipisicing</strong> <em>elit</em>. Inventore, reiciendis minus?
+			Quas ullam consequuntur voluptates nobis illo, eligendi magnam blanditiis
+			rerum sapiente amet sed at?
+		</p>
+
+		<p>
+			2<sup>5</sup> <br />
+			O<sub>2</sub>
+		</p>
+
+		<!-- Same text as in text editor -->
+		<pre>
+            My Name is Devansh,
+            I am from Rajkot. 
+        </pre
+		>
+
+		<p>This is a <code>def func(x):</code> function in python</p>
+
+		<!-- EMMET -->
+
+		<!-- 
+            1. p>p>p>p
+            2. p>img
+            3. p>article+img
+            4. p>article*3+section
+            5. p{content}
+            6. p>lorem7  ==  <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+            7. p{lorem7}  ==  <p>lorem7</p>
+            7. p{content}>table>(tr>td{content}*3)*4 
+        -->
+
+		<!-- 
+            1. p#12  ==  <p id="12"></p>
+            2. article#a1  ==  <article id="a1"></article>
+            3. p.para ==  <p class="para"></p>
+            4. article.A.B.C  ==  <article class="A B C"></article>
+        -->
+
+		<!-- FORMS -->
+
+		<h1>Job Application Form</h1>
+
+		<form action="post">
+			<label for="fname">Full Name : </label>
+			<input
+				type="text"
+				id="fname"
+				name="full name"
+				placeholder="Enter your full name"
+				autofocus
+				pattern="[a-zA-Z0-9]+" />
+
+			<div>
+				<label for="gender">Gender : </label>
+
+				<label for="male">Male</label>
+				<input type="radio" id="male" name="gender" />
+
+				<label for="female">Female</label>
+				<input type="radio" id="female" name="gender" />
+
+				<!-- if you give same name to both male and female then only you can select only one -->
+			</div>
+
+			<div>
+				<label for="role">Role : </label>
+
+				<label for="swe">Software Engineer</label>
+				<input type="checkbox" id="swe" name="role" />
+
+				<label for="pe">Product Engineer</label>
+				<input type="checkbox" id="pe" name="role" />
+
+				<label for="da">Data Analyst</label>
+				<input type="checkbox" id="da" name="role" />
+			</div>
+
+			<div>
+				<label for="com">Comments : </label> <br />
+				<textarea
+					name="comments"
+					id="com"
+					rows="5"
+					cols="50"
+					placeholder="Enter your comments here..."></textarea>
+			</div>
+
+			<div>
+				<label for="pass">Create Password : </label>
+				<input
+					type="password"
+					id="pass"
+					placeholder="Enter Password"
+					required />
+			</div>
+
+			<div>
+				<label for="opt">Enter your options : </label>
+				<select name="option" id="opt">
+					<option value="apple">Apple</option>
+					<option value="banana">Banana</option>
+					<option value="cherry">Cherry</option>
+				</select>
+			</div>
+		</form>
+
+		<!-- inline and block elements -->
+
+		<p>
+			Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab, sapiente!
+		</p>
+		<a href="https://google.com">Google</a>
+		<span>Hey there</span>
+		<div>
+			Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magnam, maiores.
+		</div>
+
+		<!-- classes and IDs -->
+		<div class="A B" id="d1">First Div</div>
+
+		<div class="B" id="d2">Second Div</div>
+
+		<br>
+		<br>
+
+		<!-- media -->
+		<video src="video.mp4" height="300" controls loop muted poster="image.jpg">This is a video</video>	<!-- autoplay is also an attribute -->
+		
+		<br>
+
+		<audio src="audio.mp3" controls loop muted preload="metadata">This is an audio</audio>
+		
+		<br>
+		
+		<svg height="100" width="100">
+			<circle cx="50" cy="50" r="40" stroke="black" stroke-width="3" fill="blue" />
+		</svg>
+		
+		<img src="image.svg" alt="SVG file">
+
+		<br/>
+
+		<iframe src="https://www.codewithharry.com/tutorial/html-iframes" frameborder="0" width="500" height="250">This is CWH iFrame</iframe>
+
+		<br>
+		<br>
+
+		<iframe width="560" height="315" src="https://www.youtube.com/embed/XZwBNDGuWGU?si=Ze1BaGkeEKvcu3JZ&amp;start=846" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+		<!-- Misc HTML  -->
+		<p>
+			This is para tag &lt;p&gt;&lt;/p&gt;
+		</p>
+
+		<!-- does not show tags -->
+		<!-- <pre>
+			<h1>My self</h1>
+			<p>This is a para</p>
+		</pre> -->
+
+		Copyright &copy; Devansh &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &amp Reserved.
+
+		<br>
+		
+		<q cite="https://www.codewithharry.com/tutorial/html-entities">
+			Quote
+		</q>
+
+		<blockquote cite="https://chatgpt.com/c/68b5f528-af98-8333-b82b-4078c37510a4">
+			This is a big quote.
+		</blockquote>
+
+		<pre><code>
+			def func(str):
+				list = str.split(" ")
+				for item in list:
+					print(item)
+				return list
+		</code></pre>
+	
+	</body>
+</html>
