@@ -1,0 +1,73 @@
+/* For importing certain fonts from Google fonts  */
+@import url('https://fonts.googleapis.com/css2?family=Asimovian&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu+Sans:ital,wght@0,100..800;1,100..800&display=swap');
+
+div {
+    font-family: "Source Code Pro", sans-serif;
+    font-style: oblique;
+    font-size: small;
+}
+
+#d1 {
+    font-weight: bold;
+    line-height: 2;
+    letter-spacing: 2px;    
+    text-transform: lowercase;
+    text-indent: 100px;     /* indent */
+}
+
+#d2 {
+    font-weight: normal;
+    line-height: 1.5;
+    word-spacing: 10px;
+    text-transform: uppercase;
+}
+
+h3 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 700;
+    font-size: x-large;
+    text-transform: capitalize;
+    text-align: center;
+    
+    /* text decoration */
+    text-decoration: underline;  /* line-through, overline */
+    text-decoration-color: green;
+    text-decoration-style: dashed;
+    text-decoration-thickness: 2px;
+}
+
+.lorem2 {
+    padding: 1px;
+    border: 2px solid blue;
+    width: 40px;
+    text-overflow: ellipsis;    /* dot dot when exceeds, for clip - it hides behind border */
+    overflow: hidden;   /* if this is not writtern then the word goes outside the border */
+
+    word-break: break-all;  
+    /* break-all : breaks all words */
+    /* keep-all : keeps all words */
+}   
+
+#li1 {
+    color: blue;
+}
+
+#li2 {
+    color: #ff0000;
+}
+
+#li3 {
+    color: rgb(38, 150, 13);
+}
+
+#li4 {
+    color: rgba(220, 70, 183, 0.477);
+}
+
+#li5 {
+    color: hsl(179, 42%, 35%);
+}
+
+#li6 {
+    color: hsla(60, 78%, 45%, 0.581);
+}

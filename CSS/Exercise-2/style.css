@@ -1,0 +1,19 @@
+div > p:nth-child(2){
+    color: red;
+    background-color: yellow;
+}
+
+div > p:first-child{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: green;
+    background-color: white;
+}
+
+div > p:not(:first-child) {
+    font-style: italic;
+}
+
+div > p {
+    color: white;
+    background-color: blue;
+}
