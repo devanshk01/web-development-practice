@@ -1,6 +1,6 @@
 # Full-Stack Daily Progress
 
-Hey — this is my messy, real, daily log of learning full-stack web dev. Small experiments, little projects, screenshots, audio/video, whatever I made that day goes here. Nothing fancy — just code + notes so I actually build stuff every day.
+Hey — this is my messy, real, daily log of learning full-stack web dev. Small experiments, little projects whatever I made that day goes here. Nothing fancy — just code + notes so I actually build stuff every day.
 
 ---
 
