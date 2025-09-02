@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+
+		<!-- internal CSS  -->
+		<!-- <style>
+            div, span{
+                color: darkblue;
+                background-color: burlywood;
+            }
+        </style> -->
+
+		<!-- Adding external CSS -->
+		<link rel="stylesheet" href="style.css" />
+	</head>
+
+	<body>
+		<p>I am the first child.</p>
+		<div>My name is Devansh.</div>
+		<div>I am in MnC Programme.</div>
+
+		<br />
+
+		<div>
+			Three ways to add CSS:
+			<ol>
+				<li>Inline CSS</li>
+				<li>Internal CSS</li>
+				<li>External CSS</li>
+			</ol>
+		</div>
+
+		<!-- Example of inline CSS -->
+		<p style="color: green">
+			Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat eius quod
+			expedita veritatis accusamus soluta reprehenderit porro aspernatur eaque
+			voluptatum, dignissimos minima eligendi vero repudiandae architecto quas
+			corporis rerum sit.
+		</p>
+
+		<!-- Multiple elements styled with same class -->
+		<p class="light_green">
+			Lorem, ipsum dolor sit amet consectetur adipisicing elit. Adipisci
+			consequatur est nesciunt eaque nam saepe optio veritatis quo vel nisi.
+		</p>
+
+		<div class="light_green">
+			This is another div of <code>light_green</code> class
+		</div>
+
+		<br />
+
+		<!-- Styled with ID -->
+		<div id="d1">This &ltdiv&gt has ID = "d1".</div>
+
+		<!-- Child selectors and Descendent selector -->
+		<div>
+            <p>
+                This is Child selector. Lorem, ipsum dolor sit amet consectetur
+				adipisicing elit. Beatae, voluptatibus minima atque nulla doloremque, accusantium aliquid aspernatur minus natus eum sunt eius necessitatibus
+				nostrum nemo autem temporibus. Ducimus, molestias excepturi.
+
+                <!-- <p>Imposter-2</p> --> <!-- <p> under <p> is not allowed since it is a block element -->>
+
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ut, veritatis.
+			</p>
+
+			<article>
+				<p>
+					This won't be affected by child selector, but will be affected by
+					descendent selector
+				</p>
+			</article>
+		</div>
+
+		<!-- Link will become red after once visiting  -->
+		<a href="https://www.youtube.com">Go to YouTube</a>
+
+		<br />
+
+		<!-- Non-visited websites will be green -->
+		<!-- active and hover also applies here -->
+		<!-- If hover is there then active does not work -->
+		<a href="https://www.facebook.com">Go to Facebook</a>
+
+        <div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, aut.</p>
+            <div>
+                I am the by-passer.
+                <p>Lorem ipsum dolor sit amet.</p>
+                <p>What is wrong with me, I am second</p>
+            </div>
+        </div>
+	</body>
+</html>

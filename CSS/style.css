@@ -1,0 +1,63 @@
+/* div, span{
+    color: darkblue;
+    background-color: burlywood;
+} */
+
+/* Types of selectors */
+
+/* 1. Element selector  */
+div{
+    background-color: aqua;
+}
+
+/* 2. Class selector */
+.light_green{
+    background-color: lightgreen;
+}
+
+/* 3. ID selectors */
+#d1{
+    color: aquamarine;
+    background-color: rgb(59, 59, 59);
+}
+
+/* 4. Child selectors :
+If immediately under the <div> there is a <p> then only this works */
+div > p {
+    font-family: cursive;
+}
+
+/* 5. Descendent selector :
+any <p> under <div> will be affected */
+div p {
+    color: brown;
+}
+
+/* 6. pseudo-selector */
+a:visited {
+   color: red; 
+}
+
+a:link{
+    color: green;
+}
+
+a:active {
+    background-color: black;
+}
+
+/* if hover, then active does not work  */
+a:hover {
+    background-color: lightblue;
+}
+
+/* when p is the first child of it's parent then this property is applied */
+p:first-child{
+    font-size: smaller;
+    font-family: fantasy;
+}
+
+/* 7. Global selector  */
+* {
+    margin: 0.25cm; 
+}
