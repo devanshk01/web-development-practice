@@ -1,0 +1,86 @@
+/*
+    Priority order:
+     
+    !important > inline style > ID selector > class selector = attribute selector = pseudo-classes > element selector > universal selector
+
+    If same priority selector then the one tht were implemented later will be used
+*/
+
+/* We try to use less and less specific selectors so that in future if we want to override it becomes easy */
+
+/* 
+	Specificity Calculation:
+	
+	!important   			 		= 10000
+	inline style 			 		= 1000
+	ID selector  			 		= 100
+	class/attribute/pseudo-classes  = 10
+	elements			 	 		= 1
+	universal selector 		 		= 0
+
+	Rule: if two selectors are used in one style then add their specificity.
+
+	E.g. style S = div.A {color: green;}
+	-	spec(S) = 1 (for div) + 10 (for A class)
+				= 11
+	-   style B = .B {color: blue;}
+	-	spec(B) = 10
+
+	- 	So, S > B in style priority
+*/
+
+/* 
+	E.g. What is the specificity of following style:
+	-	a.A.dev-class[href]:hover
+	-	Ans. 1 (<a>) + 10 (class="A") + 10 (class="dev-class") + 10 (attribute [href]) + 10 (pseudo-class "hover") 
+	= 41
+
+*/
+
+/* element selector */
+div {
+	color: red;
+}
+
+/* <div> with class="A" */
+div.A {
+	color: lightgreen;
+}
+
+/* class selector */
+.B {
+	color: green;
+}
+
+/* attribute selector */
+p[devansh] {
+	font-weight: bolder;
+}
+
+/* This means having "devansh" attribute is enough value does not matter */
+[devansh] {
+	font-size: x-small;
+}
+
+[devansh="yes"] {
+	color: orange !important;
+}
+
+.C {
+	color: yellow;
+}
+
+.A {
+	color: blue;
+}
+
+/* ID selector */
+#div-1 {
+	color: brown;
+}
+
+/* global selector */
+* {
+	color: gray;
+	font-style: italic; /* the previous style only gets depricated if there is some other selector overriding it, otherwise the style stays, here it will be italic even if anyone else changes colours */
+}

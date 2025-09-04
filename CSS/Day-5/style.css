@@ -1,0 +1,102 @@
+* {
+	margin: 0;
+	padding: 0;
+
+	font-family: "Times New Roman", Times, serif;
+}
+
+.box {
+	border: 2px solid black;
+	background-color: aqua;
+
+	/* This should not work so we change the units
+        width: 1307px; 
+    */
+
+	/* width: 100vw;   100% viewport width */
+	width: 80vw; /* 80% viewport width */
+
+	margin: 10px auto; /* auto means auto adjust on all sides */
+	/* margin: 20px auto;  for top-bottom 20px and in the left-right it auto-adjusts */
+
+	/* height: 100vh;  100% viewport height */
+	height: 10vh; /* 80% viewport height */
+
+	box-sizing: border-box;
+}
+
+.container {
+	background-color: lightgreen;
+
+	border: 2px solid black;
+	box-sizing: border-box;
+
+	width: 80vw;
+	height: 50vh;
+
+	margin: auto;
+
+	/* font-size: 14px; */
+}
+
+.container p {
+	/* font-size is a property that is inherited form its parent */
+	font-size: 2em; /* 2 times of parent font-size */
+	/* margin: 2em; 2 times of parent font-size */
+}
+
+/*
+    html {
+        font-size: 10px;
+    }
+
+    .root-child {
+        font-size: 3rem !important;     --> 3 times root (html is root element) font-size 
+    }
+*/
+
+/* .container p > .root-child  (in terms of specificity) */
+
+.A {
+	border: 2px solid black;
+	box-sizing: border-box;
+
+	background-color: lightcoral;
+	height: 80vmax; /* vmax= max(viewport height, viewport width) */
+	width: 80vmin; /* vmin= min(viewport height, viewport width) */
+
+	margin: 20px auto;
+}
+
+/* min-width, min-height, max-width, max-height */
+
+.B {
+	/* height: 100vh; */
+	min-height: 80vh; /* you can take min this much heigth and extend if needed */
+	max-height: 60vh; /* you can take max this much heigth and de-extend if needed */
+	width: 80vw;
+}
+
+/* 
+    1. (a) If use min-height and height together then range would be r = [min-height, max(min-height, height)] 
+       (b) If use max-height and height together then range would be r = [min(max-height, height), max-height] 
+    2. The element’s actual height must be >= min-height.
+    3. The element’s actual height must be <= max-height.
+    4. If the values conflict (e.g. min-height > max-height), the larger one wins and the other is ignored.
+*/
+
+/* percentage size */
+
+.B > div {
+	width: 50%; /* 50% of parents width, can't use if parents width is not defined */
+	border: 2px solid blue;
+	box-sizing: border-box;
+	margin: 10px auto;
+}
+
+.B > div > div {
+	width: 50%; /* 50% of parents width, can't use if parents width is not defined */
+	border: 2px solid red;
+	box-sizing: border-box;
+	margin: 10px auto;
+}
