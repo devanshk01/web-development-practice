@@ -16,4 +16,4 @@ Hey — this is my messy, real, daily log of learning full-stack web dev. Small 
 2. Put codes inside.
 3. Commit with a msg and push to `main`.
 
-- Devansh.
+> -- Devansh.
