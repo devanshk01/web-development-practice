@@ -15,3 +15,5 @@ Hey — this is my messy, real, daily log of learning full-stack web dev. Small 
 1. Create a new folder for each day or exercise: `Day-<n>` or `Exercise-<n>`.
 2. Put codes inside.
 3. Commit with a msg and push to `main`.
+
+- Devansh.
