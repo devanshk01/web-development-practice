@@ -1,0 +1,32 @@
+nav ul li {
+    /* List has two parts: "marker. item"*/
+
+    /* removes markers */
+    list-style: none;   
+
+    /* markers can be edited */
+    list-style: circle;
+    list-style: square;
+    list-style: devanagari;
+
+    background-color: lightblue;
+    border: 2px solid black;
+    /* here markers are not included in the styles, to resolve this we use: */
+    list-style-position: inside; /* can be with list-style as well */
+
+    /* differnt ways to edit list style */
+    list-style-type: "💜";
+    /* list-style-image: url(https://cdn-icons-png.flaticon.com/128/3917/3917033.png); */
+}
+
+/* to make a proper nav bar */
+ul {
+    display: flex;
+}
+.nav-bar {
+    list-style: none;
+    padding: 10px;
+    margin: 10px;
+    width: 100px;
+    text-align: center;
+}
