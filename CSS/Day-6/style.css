@@ -1,0 +1,76 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+.box {
+	border: 2px solid blue;
+	box-sizing: border-box;
+
+	padding: 10px;
+	margin: 10px;
+
+	width: 200px;
+
+	/* If do this then, padding and margin will not be given from top, also width and height won't be affected */
+	/* display: inline; */
+
+	/* Instead do this for making inline elements */
+	display: inline-block;
+
+	/* Hides this element and the space is used by others */
+	/* display: none; */
+
+	/* Hides this element but the space is reserved */
+	/* visibility: hidden; */
+
+	/* flex */
+	display: flex;
+	display: inline-flex; /* just makes it inline and flex */
+	justify-content: center;
+}
+
+.shadow {
+	border: 2px solid blue;
+	box-sizing: border-box;
+	width: 200px;
+	margin: 10px;
+	padding: 10px;
+
+	/* box-shadow: h-offset v-offset blur spread color inset; */
+	box-shadow: 2px 2px 5px 2px blue;
+	/* offsets are basically x-y coordinates */
+	/* Negative values of offsets means, on the opposite side */
+	/* inset : inside border */
+	/* blur : greater value means more blur */
+	/* spread : greater value means more spread */
+
+	/* To perfectly select shadow parameters use inspect */
+
+	/* text-shadow: h-offset v-offset blur color; */
+	text-shadow: 5px 5px 5px red;
+}
+
+.outline {
+	border: 2px solid blue;
+	box-sizing: border-box;
+	width: 200px;
+	margin: 20px;
+	padding: 10px;
+
+	/* outline: width style color; */
+	/* outline is outside the border and is not counted in box-model */
+	outline: 2px dashed red;
+	outline-offset: 5px; /* distance from border, negative means inside */
+	/* cant directly change the border-offset */
+
+	/* border can have have different width on different sides but same cannot be true for outline */
+
+	/* border-top: 12px solid black; */
+	/* border-bottom-width: 10px; */
+	/* different syntaxes*/
+
+	/* border can have border radius, but outlines cannot have radius directly, it follows border radius */
+	border-radius: 10px;
+	/* similar to width it can have differnt radius in diff corners */
+}
