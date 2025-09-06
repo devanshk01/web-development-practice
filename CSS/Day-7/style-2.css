@@ -1,0 +1,31 @@
+.box {
+    border: 2px solid blue;
+    width: 30vw;
+    height: 30vh;
+/*  */
+    /* means add scrollbar even if it fits */
+    overflow: scroll;   
+
+    /* means add scrollbar if exceeds */
+    overflow: auto;
+
+    /* means add horizontal scroll but in vertical add auto */
+    /* overflow: scroll auto; */
+
+    /* does not wrap at white space */
+    /* white-space: nowrap; */
+
+    /* hides overflow */
+    overflow: hidden;
+    /* overflow: hidden scroll; */
+
+    /* adds dot dot */
+    /* text-overflow: ellipsis; */
+
+    /* similar to hidden, but can't programmatically scroll */
+    /* overflow: clip; */
+
+    /* individual overflow, same as overflow: hidden auto*/
+    overflow-x: hidden;
+    overflow-y: auto;
+}
