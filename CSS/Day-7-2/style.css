@@ -1,0 +1,79 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+.box {
+	border: 2px solid black;
+	width: 60vw;
+	height: 100px;
+	margin: 10px;
+	padding: 10px;
+}
+
+/* Static positions means, it will stay whereever it is, top, bottom props will not affect */
+.box1 {
+	background-color: lightcoral;
+	/* position: relative; */
+	/* z-index: 2; */
+	/* to use z-index we need to make position relative */
+	/* making z-index more than others means this will overlap them = */
+}
+.box2 {
+	background-color: aqua;
+	/* position: relative; */
+	/* top: -30px; top means from top goes +10px */
+	/* left: 30px; */
+	/* after this box-2 will be above box-1 */
+	/* to make box-1 above box-2, increase z-index of box-1 */
+	/* z-index: 3; */
+
+	/* sticky means it will behave as relative until it is about to reach the top/bottom/etc offset, it sticks at the offset */
+	/* It remains stuck until the boundary of its nearest scrollable ancestor (the containing block) is passed. */
+	/* Stay fixed at the top only within its parent container.
+        Stop sticking when its parent finishes scrolling (i.e., when the parent’s bottom edge scrolls past the viewport). */
+	position: sticky;
+	top: 10px;
+}
+.box3 {
+	background-color: antiquewhite;
+	/* position: absolute; */
+	/* top: 0px; */
+	/* left: 0px; */
+	/* absolute position means, it will not be positioned relative to any element in its surrounding, it will only be relatively positioned to its nearest ancestor if exists otherwise to root element <html> */
+	/* 
+        Exception: transform, filter, perspective properties can also, make an element appear as positioned, i.e., it box-3's ancestor have one of these 3 props but dont have position set, this will still be positioned relative to that ancestor
+    */
+	/* if we dont set top-bottom etc, then the other elemetns will ignore this element's position */
+}
+.box4 {
+	background-color: lightgreen;
+	/* position: fixed; */
+
+	/* fixed essentially means that the position of the boxed stays fixed in the screen even if we scroll or move page */
+	/* parent ignores this box */
+	/* if you dont add top and left then it stays whereever it is but if you do apply it goes relative to the root */
+	/* top: 0px; */
+	/* left: 0px; */
+}
+
+.parent {
+	border: 2px solid purple;
+	margin: 30px;
+	padding: 30px;
+
+	/* position: relative; */
+	/* if position is set here them box-3 will take this in account and will be positioned according to this, however it will ignore padding of this parent */
+	/* read exception from box3 */
+	/* transform: translate(0); */
+	/* filter: invert(0); */
+	/* perspective: 0em; */
+}
+
+/* To add scroll to check fixed position property */
+.content {
+	padding: 30px;
+	margin: 30px;
+	border: 2px solid blue;
+	font-family: Georgia, "Times New Roman", Times, serif;
+}
