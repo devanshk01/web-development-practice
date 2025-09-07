@@ -1,0 +1,122 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+/* All elements children inside .boxes */
+.boxes * {
+	background-color: lightblue;
+	--col: lightblue;
+}
+
+/* Grouping of selectors in CSS */
+/* this is rendered as 
+    .boxes .box1  
+    .box2,  
+    .box3,  
+*/
+/*  So we need to write it in this way:
+    .boxes .box1  
+    .boxes .box2,  
+    .boxes .box3,
+*/
+.boxes .box1,
+.boxes .box2,
+.boxes .box3 {
+	margin: 10px;
+	padding: 10px;
+
+	border: 2px solid blue;
+	border-radius: 2px;
+
+	display: flex;
+}
+
+.boxes .box1 .des,
+.boxes .box2 .des,
+.boxes .box3 .des {
+	padding: 10px;
+	margin: 0px 10px 0px 0px;
+	/* top right bottom left */
+
+	border: 2px solid purple;
+	border-radius: 2px;
+}
+
+.box1::first-line {
+	color: red;
+}
+
+/* HTML-CSS are case-insensitive so devansh and Devansh attributes is same, but value "Yes" and "yes" are not same */
+[devansh="Yes"] {
+	font-style: italic;
+	background-color: lightsalmon;
+	--col: lightsalmon;
+}
+
+.boxes .box1 img,
+.boxes .box2 img,
+.boxes .box3 img {
+	/* inherits the value of --col from its parent */
+	--col: inherit;
+
+	width: 250px;
+	border: 1px solid var(--col);
+	border-radius: 3px;
+	box-shadow: 0px 0px 10px 5px var(--col);
+	margin: 0px 10px;
+}
+
+.box:nth-child(even) {
+	font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+.box:nth-last-child(1) {
+	font-weight: bolder;
+}
+
+/* inside .box, add before and after */
+.box::before,
+.box::after {
+	content: "I am the GOAT!";
+	border: 2px solid darkgreen;
+	border-radius: 2px;
+	padding: 5px;
+	background-color: white;
+	/* width: 100px; */
+}
+
+.box2 .des::selection {
+	color: lightcoral;
+	background-color: greenyellow;
+	text-shadow: 2px 2px 2px black;
+
+	/* cant use, will be ignored */
+	font-family: consolas;
+}
+
+.box *::first-letter {
+	font-size: 45px;
+}
+
+.form {
+    margin: 10px;
+    padding: 10px;
+
+    border: 2px solid black;
+}
+
+.form input::placeholder {
+    color: lightcoral;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.form input {
+    padding: 5px;
+    margin: 0px 10px;
+
+    text-align: center;
+
+    border: 2px solid black;
+    border-radius: 5px;
+}
