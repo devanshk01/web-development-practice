@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --defcolor: darkblue;
+    --defbgcolor: lightblue;
+    --defbarcol: rgb(24, 153, 251);
+    --defconcol: rgb(0, 200, 255);
+    --maincol: rgb(209, 233, 241);
+}
+
+body {
+    background-color: var(--maincol);
+}
+
+nav.navbar {
+    border: 2px solid darkblue;
+    background-color: var(--defbarcol);
+    border-radius: 5px;
+    margin: 10px;
+    padding: 10px;
+}
+
+ul.mainbar {
+    list-style: none;
+    display: flex;
+}
+
+ul.mainbar li {
+    margin: 0px 10px;
+    padding: 5px 10px;
+    width: 100px;
+    text-align: center;
+
+    font-size: small;
+    font-family: "Fira Code";
+
+    color: var(--defcolor);
+    background-color: var(--defbgcolor);
+
+    border: 2px solid var(--defcolor);
+    border-radius: 5px;
+    box-shadow: 0px 0px 3px 0px var(--defcolor);
+}
+
+ul.mainbar li a {
+    color: darkblue; /* we need to change color here */
+    text-decoration: none;
+}
+
+.content {
+    margin: 10px;
+    padding: 10px;
+
+    font-family: 'Times New Roman', Times, serif;
+
+    border: 2px solid var(--defcolor);
+    border-radius: 5px;
+    background-color: var(--defconcol);
+}

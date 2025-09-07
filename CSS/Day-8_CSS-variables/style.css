@@ -1,0 +1,48 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+/* variables are usually defined in root */
+
+:root {
+	/* If I change this value it affects at all places where implemented */
+	--color: lightgreen;
+	--color-2: rgb(57, 213, 57);
+	--defpad: 10px;
+	--defop: 0.5;
+}
+
+h1 {
+	margin: 10px;
+}
+
+nav.main ul {
+	display: flex;
+}
+
+nav.main ul li {
+	border: 1px solid blue;
+	list-style: none;
+	margin: 10px;
+	padding: 5px 10px;
+	border-radius: 5px;
+	background-color: var(--color, lightblue);
+    opacity: var(--defop);
+	/* bracket value is the one which should be used if variable is not found */
+	/* I can use this variables here, so that if in future I want to change this color/theme I just need to change at one place */
+}
+
+.content {
+	border: 2px solid blue;
+	padding: var(--defpad);
+	border-radius: 5px;
+	background-color: var(--color-2);
+	margin: 0px 10px;
+}
+
+/* Variables can also be overwritten */
+li:first-child {
+	--color: lightcoral;
+	/* If I write this only it will replace when calculating bg-color */
+}
