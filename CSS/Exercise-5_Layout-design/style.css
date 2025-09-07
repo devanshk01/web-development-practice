@@ -1,0 +1,174 @@
+@import url("https://fonts.googleapis.com/css2?family=Epunda+Slab:ital,wght@0,300..900;1,300..900&display=swap");
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+:root {
+	--navcol: white;
+	--navbgcol: purple;
+	--sec1col: darkred;
+	--sec2col: white;
+	--sec1bgcol: rgb(254, 182, 255);
+	--sec2bgcol: rgb(165, 31, 248);
+	--footerbgcol: rgb(42, 42, 42);
+}
+
+body {
+	background-color: rgb(236, 217, 254);
+}
+
+/* ----- Navigation Bar ----- */
+
+header.nav {
+	position: sticky;
+	top: 0px;
+}
+
+.mainnav {
+	background-color: var(--navbgcol);
+	color: var(--navcol);
+}
+
+.mainnav ul {
+	list-style: none;
+	display: flex;
+}
+
+.mainnav ul li {
+	margin: 10px;
+	padding: 5px;
+}
+
+/* To avoid the change in style after visited */
+.mainnav a, 
+.mainnav a:visited {
+    text-decoration: none;
+    color: inherit;
+}
+
+.mainnav a:hover {
+    color: lightgray;
+    cursor: pointer;
+}
+
+/* ----- Main Page ----- */
+
+.sections img {
+    max-width: 100%;
+    display: block;
+
+    /* if we dont specify color then browser uses currentColor, means the text-color of the current element */
+    border: 1px solid ;
+    border-radius: 10px;
+
+    box-shadow: 0px 0px 5px 0px;
+    
+    margin-bottom: 20px;
+}
+
+.sections {
+	/* To make right and left */
+	display: flex;
+	justify-content: space-between;
+}
+
+.sections .sec {
+	margin: 5vh 5vw;
+	padding: 20px;
+
+	width: 40vw;
+
+	border: 0px solid darkorchid;
+	border-radius: 10px;
+
+    box-shadow: 0px 0px 7px 0px darkorchid;
+
+	font-family: consolas;
+	font-size: smaller;
+}
+
+.sections .sec1 {
+	color: var(--sec1col);
+	background-color: var(--sec1bgcol);
+}
+
+.sections .sec2 {
+	color: var(--sec2col);
+	background-color: var(--sec2bgcol);
+}
+
+/* ----- Decoration ----- */
+.dec {
+	margin: 5vh 5vw;
+	padding: 50px;
+
+	border: 2px solid darkorchid;
+	border-radius: 25px;
+
+	text-align: center;
+
+	font-family: "Epunda Slab";
+	font-size: xx-large;
+	color: rgb(253, 216, 242);
+	background-color: purple;
+}
+
+/* ----- Logo ----- */
+.logo {
+	position: fixed;
+	bottom: 10px;
+	right: 10px;
+}
+
+.logo img:hover {
+    width: 52px;
+    opacity: 70%;
+}
+
+.logo img {
+	width: 50px;
+	border: 2px solid purple;
+	border-radius: 50%;
+}
+
+/* ----- Footer ----- */
+
+footer {
+	display: flex;
+	justify-content: center;
+	border: 1px solid var(--footerbgcol);
+	background-color: var(--footerbgcol);
+}
+
+.footer {
+	width: 80vw;
+
+	color: white;
+	display: flex;
+	justify-content: space-between;
+}
+
+.footer .part {
+	/* border: 2px solid white; */
+	/* width: 50px; */
+	margin: 10px 25px;
+	padding: 10px;
+}
+
+.footer ul {
+	list-style: none;
+}
+
+.footer .part li,
+.footer .part tr td {
+    font-weight: lighter;
+    color: lightgray;
+    padding: 5px 0px;
+}
+
+.footer .part .lhead {
+    font-weight: bolder;
+    padding-bottom: 10px;
+}
