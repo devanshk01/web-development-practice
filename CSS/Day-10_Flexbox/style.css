@@ -1,0 +1,90 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    margin: 10px;
+    padding: 10px;
+    border: 2px solid darkred;
+    height: 80vh;
+    background-color: lightseagreen;
+
+    /* To start using flexbox properties inside container class */
+    display: flex;  /* default is horizontal */
+    /* flex-direction:column-reverse; */
+    flex-direction: row;
+
+    flex-wrap: wrap;
+    /* flex-wrap: wrap-reverse;    wraps upward */
+
+    /* flex-flow: column wrap-reverse; */
+    /* flex-flow: <flex-direction> <flex-wrap>; */
+
+    /* justify-content: center;    /* horizontally centered (when flex-dir = row) */        
+    /* justify-content: space-around;  /* equal spaces around the items  */     
+    /* justify-content: space-between;     /* equal spaces (only) between contents */       
+
+    /* for single row */
+    align-items: center;        /* vertically centered (when flex-dir = row) */
+    /* for multiple rows */
+    align-content: center;  /* centers the lines without gaps if mutliple lines */
+
+    gap: 1cm;
+    gap: 0.25cm 0.5cm;     /* <row> <column> */
+    /* row-gap: 2cm; */
+    /* column-gap: 3cm; */
+}
+
+.item{
+    height: 2cm;
+    width: 2cm;
+    border: 1pt solid black;
+    background-color: lightblue;
+    /* margin: 5px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* properties which are applied on items and not containers */
+    /* order: 1; */  /* lower the order earlier it comes */
+    /* default order value is 0 */
+
+    /* flex-grow=1 means all items of this takes entire width of
+    the flex-box with all items having equal width */
+    flex-grow: 1;
+}
+
+.item-1 {
+    /* This means that it takes twice the width as of the other ones */
+    flex-grow: 2;
+    flex-shrink: 2;     /* shrinks 2 times faster when necessery, when no-wrap */
+    align-self: flex-start;     /* works when align content is not there */
+}
+
+.order-1{
+    order: 1;
+}
+
+.order-2{
+    order: 2;
+}
+
+.order-3{
+    order: 3;
+}
+
+
+/* Flex Axis */
+/* Default left to right is Main Axis */
+/* Default top to bottom is Cross Axis */
+/* When Flex Dir = column */
+/* Default top to bottom is Main Axis */
+/* Default left to right is Cross Axis */
+/* and so on.. */
+
+/* justify-contents centers along MAIN AXIS */
+/* align-items centers along CROSS AXIS */
+
+/* main-start and main-end in main-axis */
+/* cross-start and cross-end in cross-axis */
