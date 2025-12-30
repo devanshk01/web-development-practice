@@ -1,0 +1,93 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    margin: 10px;
+    border: 2px solid black;
+    height: 90vh;
+    
+    display: grid;
+
+    /* grid-template-columns: [first] 150px [second] 100px [last];
+    grid-template-rows: 100px 100px 100px; */
+
+    /* grid-template-columns: 1fr 2fr 1fr; */
+    /* grid-template-columns: repeat(10, 1fr);  repeat 1fr 10 times */
+    /* grid-template-columns: repeat(10, minmax(100px, 1fr));  min=100px, max=1fr */
+    /* fr = fraction, divides the fraction according to available width */
+
+    /* grid-template-areas: "nav nav nav"
+                         "side main main"
+                         "footer footer footer"; */
+
+
+    /* GAP is more useful in flexbox and grid than padding */
+    
+    /* gap: 10px;
+    row-gap: 10px;
+    column-gap: 100px; */
+
+    /* "*-items" means you are moving them within their cells */
+    justify-items: center;
+    align-items: center;
+
+    /* "*-content" means you are moving entire grid within the container */
+    /* Example : */
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: 100px 100px;
+
+    /* entire grid is moved */
+    justify-content: center;
+    align-content: end;
+
+    /* place-content: center;  /* justify + align = center */ 
+}
+
+.item {
+    border: 2px solid darkslateblue;
+    width: 50px;
+    height: 50px;
+    margin: 10px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* FIRST WAY OF USING CSS GRIDS */
+/* .item-1, .item-4 {
+/*     grid-row: 1/2;      /* from grid line 1 to 2 */
+/*     /* OR */
+/*     /* grid-row-start: 1;
+/*     grid-row-end: 2; */
+/* 
+/*     grid-column: first/last;   /* from grid line 1 to 2 */
+/* }
+*/
+
+
+/* SECOND WAY OF USING GRIDS */
+.item-4 {
+    /* grid-area: nav; */
+    background-color: lightcoral;
+    align-self: flex-start;
+    justify-self: end;
+}
+
+.item-5 {
+    /* grid-area: side; */
+    background-color: lightseagreen;
+}
+
+.item-1 {
+    /* grid-area: footer; */
+    background-color: lightslategray;
+}
+
+.item-3 {
+    /* grid-area: main; */
+    background-color: lightskyblue;
+}

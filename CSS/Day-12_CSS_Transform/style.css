@@ -1,0 +1,50 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    margin: 20px;
+    border: 2px solid black;
+    height: 80vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box {
+    width: 100px;
+    height: 100px;
+    border: 2px solid darkred;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transform: rotate(40deg);
+    transform: rotate(0.25turn);    /* 1/4 of 360deg */
+
+    transform: rotateX(45deg);  /* rotates about the x-axis by 45deg */
+    transform: rotateY(45deg);  /* rotates about the y-axis by 45deg */
+    transform: rotateZ(45deg);  /* rotates about the z-axis by 45deg */
+
+    transform: scale(2);        /* 2 times larger */
+    transform: scaleX(1.5);     /* scaled in x-axis only */
+
+    transform: skew(5deg);      /* default in x-axis */
+    transform: skewY(-5deg);    /* reverse 5deg */
+    /* skew cant be done in Z-axis */
+
+    transform: translate(50px);     /* default in x-axis */
+    transform: translateY(60%);     /* 60% width of the box */
+    
+    /* FOR MULTIPLE TRANSFORMS TOGETHER */
+    /* tranlated and then rotated */
+    transform: translateY(-100%) rotate(45deg) scale(1.5) skew(-25deg);
+    /* rotated and then translated in the direction of rotation (axes are also ratated) */
+    transform: rotate(45deg) scale(1.5) skew(-25deg) translateY(-100%);
+
+    /* now rotated from the point at (0,0) default it was center (50%, 50%) */
+    /* transform-origin: 0% 0%; */
+}
