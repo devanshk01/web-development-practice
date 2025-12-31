@@ -1,0 +1,39 @@
+.container {
+    width: 50vw;
+    height: 70vh;
+
+    border: 2px solid darkred;
+    background-color: lightcoral;
+
+    display: flex;
+    justify-content: start;
+    align-items: end;
+}
+
+.ball {
+    border: 2px solid darkcyan;
+    width: 50px;
+    height: 50px;
+    background-color: cyan;
+    border-radius: 50%;
+
+    animation: bounceY 0.5s ease-out infinite alternate;   
+}
+
+.ball-x {
+    animation: bounceX 10s linear infinite;
+}
+
+@keyframes bounceX {
+    from {}
+    to {
+        transform: translateX(50vw);
+    }
+}
+
+@keyframes bounceY {
+    from {}
+    to {
+        transform: translateY(-150px);
+    }
+}
