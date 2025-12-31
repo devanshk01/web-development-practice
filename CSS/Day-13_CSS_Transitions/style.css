@@ -1,0 +1,46 @@
+.container {
+    width: 50vw;
+    height: 50vh;
+
+    border: 2px solid darkred;
+}
+
+.box {
+    border: 2px solid darkcyan;
+    width: 10%;
+    height: 10%;
+    margin: 10px;
+    padding: 5px;
+    font-size: small;
+
+    /* To which properties the transition needs to be applied */
+    /* transition-property: transform;
+    /* transition-property: all;   /* applied for all propeties */
+    /* transition-property: transform, font-size;
+    /* 
+    /* /* For how much time the transition will be applied */
+    /* transition-duration: 3s;
+/* 
+    /* /* for this you can use dev-tools "inspect" in browser */
+    /* transition-timing-function: ease-in-out;
+    /* /* custom function */
+    /* transition-timing-function: cubic-bezier(0.92, 0.06, 0.92, 0.06);
+/* 
+    /* /* After how much time the transition is started */
+    /* transition-delay: 1s;
+
+
+    /* ----- short form ----- */
+    /* transition: <property> <duration> <timing-func> <delay>; */
+
+    transition: transform 5s ease 2s, 
+                font-size 3s ease-in-out 10s;   
+
+    transition: all 4s ease 1s;
+}
+
+.box:hover, .translate {
+    transform: translateX(100px) translateY(200px) skew(45deg) rotate(45deg);
+    background-color: lightcoral;
+    font-size: large;
+}

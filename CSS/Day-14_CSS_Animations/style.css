@@ -1,0 +1,75 @@
+.container {
+    width: 50vw;
+    height: 50vh;
+
+    border: 2px solid darkred;
+    background-color: lightcoral;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box {
+    border: 2px solid darkcyan;
+    width: 10%;
+    height: 10%;
+    margin: 10px;
+    background-color: cyan;
+
+    animation-name: myAni;
+    animation-duration: 2s;
+    animation-timing-function: cubic-bezier(1, 0.06, 1, 0.05);
+    animation-delay: 2s;    /* if count is multiple then delayed for the first only */
+
+    animation-direction: reverse;       /* timing-func is also inversed and to -> from and from -> to */
+    animation-direction: alternate;     /* alternates dir starting from forward */
+    animation-direction: alternate-reverse;     /* alternates dir starting from backward */
+
+    /* number of times to repeat the animation */
+    animation-iteration-count: 3;
+    animation-iteration-count: infinite;
+
+    animation-play-state: running;  /* animation is started from where it was paused */
+    animation-play-state: paused;   /* animation is paused at its current state */
+
+    /* ----- Short form ----- */
+    /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+
+    /* animation: myAni 1s linear 0s infinite alternate; */
+    animation: myAni 1s linear 3s 2 reverse;      /* even if you miss, it will interpret */
+
+    animation-fill-mode: forwards;      /* takes the final mode "to{}" */
+    animation-fill-mode: backwards;      /* the from (if reverse then "to") part is applied when "delay" */
+    animation-fill-mode: both;  /* to apply both */
+
+    animation: myAni 1s linear 2s infinite,
+                multiAni 2s linear 1s infinite reverse;
+}
+
+@keyframes myAni {
+    from {
+        background-color: lightpink;
+    }
+    to {
+        /* transform: translateX(250px); */
+        background-color: lightgreen;
+    }
+}
+
+@keyframes multiAni {
+    /* %age are divisions of duration time */
+    /* duration=2s then 0% = 0s (from part) 25% = 0.5s and so on */
+    0%{
+
+    }
+    25%{
+        rotate: 90deg;
+    }
+    50%{
+        rotate: 135deg;  /* from 90deg it will return to 25deg */
+    }
+    100%{
+        rotate: 180deg;  /* it will again go back to 90deg */
+    }
+}
