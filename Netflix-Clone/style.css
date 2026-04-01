@@ -1,0 +1,176 @@
+/* Martel Sans fonts */
+
+@import url("https://fonts.googleapis.com/css2?family=Martel+Sans:wght@200;300;400;600;700;800;900&display=swap");
+
+* {
+	margin: 0;
+	padding: 0;
+
+	font-family: "Martel Sans";
+}
+
+header {
+	background-image: url("assets/images/main-background.jpg");
+	background-position: center center;
+	/* background-repeat: no-repeat;     */
+
+	height: 90vh;
+	border-bottom: 3px solid grey;
+	position: relative;
+}
+
+header .box {
+	height: 90vh;
+	width: 100vw;
+	background-color: rgba(0, 0, 0, 0.6);
+	/* border: 2px solid green; */
+	/* z-index: 1; */
+
+	position: absolute;
+	top: 0;
+}
+
+header .navbar {
+	height: 80px;
+	width: 70vw;
+	margin: auto;
+
+	color: white;
+	/* border: 2px solid blue; */
+	position: relative;
+	z-index: 2;
+
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+header .navbar img {
+	height: 2.5rem;
+}
+
+header .navbar .right {
+	height: 100%;
+
+	/* border: 2px solid green; */
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 15px;
+}
+
+.right .language {
+	border: 1px solid rgba(255, 255, 255, 0.5);
+	border-radius: 3px;
+
+	background-color: rgba(0, 0, 0, 0.5);
+	padding: 6px 8px;
+
+	color: white;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 8px;
+
+	font-size: 15px;
+	font-weight: 400;
+}
+
+.right .signin {
+	border: 0;
+	border-radius: 3px;
+
+	background-color: red;
+	padding: 6px 12px;
+
+	color: white;
+	font-size: 15px;
+	font-weight: 500;
+}
+
+header .main {
+	/* border: 2px solid red; */
+	color: white;
+	height: auto;
+
+	/* padding: 0px 30px; */
+
+	position: relative;
+	z-index: 2;
+
+	/* Calculate */
+	height: calc(100% - 84px);
+	width: calc(100% - 4px);
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	flex-direction: column;
+
+	gap: 20px;
+	/* padding: 20px; */
+}
+
+header .main .big {
+	font-size: 40px;
+	font-weight: 900;
+	max-width: 500px;
+
+	text-align: center;
+}
+
+header .main .medium {
+	font-size: 20px;
+	font-weight: 700;
+
+	text-align: center;
+}
+
+header .main .small {
+	font-size: 16px;
+	font-weight: 600;
+
+	text-align: center;
+}
+
+header .main .searchbar {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 10px;
+}
+
+header .main .searchbar input {
+	border: 1px solid rgba(255, 255, 255, 0.5);
+	background-color: rgba(0, 0, 0, 0.5);
+	border-radius: 3px;
+	padding: 10px;
+
+	color: white;
+
+	width: 20vw;
+}
+
+header .main .searchbar input::placeholder {
+	color: rgba(255, 255, 255, 0.6);
+}
+
+header .main .searchbar button.get-started {
+	border: 0;
+	border-radius: 3px;
+
+	background-color: red;
+	color: white;
+
+	font-size: 18px;
+	padding: 8px 12px;
+	font-weight: 600;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 10px;
+}
